@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route :: get("/", [MainController :: class, "index"])
     -> name('home');
 
+Route :: get('/project/{id}', [MainController :: class, 'show'])
+    -> name('project.show');
+
 Route::get('/dashboard', [MainController :: class, "dashboard"])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

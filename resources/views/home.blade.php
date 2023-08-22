@@ -4,7 +4,7 @@
         <h1 class="text-center mt-2">Project List</h1>
         <ul class="text-center list-unstyled mt-3">
             @foreach ($projects as $project)
-                <li class="mt-2"> {{ $project->title }} </li>
+                <li><a href="{{ route('project.show', $project->id) }}"> {{ $project->title }}</a></li>
             @endforeach
         </ul>
     </div>

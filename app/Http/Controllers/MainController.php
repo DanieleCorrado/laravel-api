@@ -16,6 +16,13 @@ class MainController extends Controller
         return view('home', compact('projects'));
     }
 
+    public function show($id) {
+        
+        $project = Project :: findOrFail($id);
+
+        return view('show', compact('project'));
+    }
+
     public function dashboard() {
 
         $projects = Project :: all();

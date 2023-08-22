@@ -21,4 +21,7 @@ Route :: prefix('/v1') -> group(function() {
 
     Route :: get('/project-index', [ProjectController::class, 'projectIndex']);
 
+    Route :: get('/project-show/{id}', [ProjectController::class, 'projectShow']);
+
+
 });
